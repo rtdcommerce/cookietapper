@@ -54,6 +54,9 @@
                                     <constraint firstAttribute="width" constant="171" id="zF5-5m-jBU"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="cookie"/>
+                                <connections>
+                                    <action selector="onCoinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RPM-tV-YKb"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93j-93-7Iq" userLabel="tapsLbl">
                                 <rect key="frame" x="218" y="255" width="164" height="33"/>
