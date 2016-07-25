@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cookieTapper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bg" translatesAutoresizingMaskIntoConstraints="NO" id="TcW-hi-4tq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cookie-Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="dxU-le-oHM" userLabel="Logo">
+                                <rect key="frame" x="137" y="45" width="326" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="326" id="7Ft-l8-1Hr"/>
+                                    <constraint firstAttribute="height" constant="85" id="r1W-o8-FDA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVD-4L-4wF" userLabel="playBtn">
+                                <rect key="frame" x="221" y="375" width="158" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="Wah-8J-nby"/>
+                                    <constraint firstAttribute="height" constant="173" id="rfY-PU-xaO"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How Many Taps?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="un2-vl-kT1" userLabel="howManyTapsLbl">
+                                <rect key="frame" x="221" y="355" width="158" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="HAo-WQ-Tbn"/>
+                                    <constraint firstAttribute="height" constant="30" id="Rin-3K-JNx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhn-26-FDc" userLabel="cookieBtn">
+                                <rect key="frame" x="215" y="28" width="171" height="171"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="171" id="im0-tg-dDU"/>
+                                    <constraint firstAttribute="width" constant="171" id="zF5-5m-jBU"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="cookie"/>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93j-93-7Iq" userLabel="tapsLbl">
+                                <rect key="frame" x="218" y="255" width="164" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="ccK-2H-6HW"/>
+                                    <constraint firstAttribute="width" constant="164" id="zGc-ev-noW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TcW-hi-4tq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5kX-81-5NP"/>
+                            <constraint firstItem="93j-93-7Iq" firstAttribute="top" secondItem="hhn-26-FDc" secondAttribute="bottom" constant="56" id="And-jb-PFd"/>
+                            <constraint firstItem="dxU-le-oHM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DUz-MJ-mdG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="un2-vl-kT1" secondAttribute="bottom" constant="215" id="IMQ-IW-0kK"/>
+                            <constraint firstItem="un2-vl-kT1" firstAttribute="leading" secondItem="cVD-4L-4wF" secondAttribute="leading" id="Mag-nK-Xwl"/>
+                            <constraint firstItem="93j-93-7Iq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SkM-Tq-AZw"/>
+                            <constraint firstItem="dxU-le-oHM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="Y13-XH-DyO"/>
+                            <constraint firstItem="hhn-26-FDc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gYW-eF-5jj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cVD-4L-4wF" secondAttribute="bottom" constant="52" id="mvv-Vk-g2U"/>
+                            <constraint firstAttribute="trailing" secondItem="TcW-hi-4tq" secondAttribute="trailing" id="orK-dh-mza"/>
+                            <constraint firstItem="hhn-26-FDc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="s0Y-Gs-Oy3"/>
+                            <constraint firstItem="cVD-4L-4wF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sPm-rh-j8u"/>
+                            <constraint firstItem="dxU-le-oHM" firstAttribute="centerX" secondItem="TcW-hi-4tq" secondAttribute="centerX" id="uJw-zZ-66h"/>
+                            <constraint firstItem="TcW-hi-4tq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ufg-04-WxZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TcW-hi-4tq" secondAttribute="bottom" id="zlu-mR-X2F"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="365" y="342"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bg" width="800" height="800"/>
+        <image name="Cookie-Tapper" width="446" height="118"/>
+        <image name="cookie" width="250" height="250"/>
+        <image name="play" width="250" height="330"/>
+    </resources>
 </document>
