@@ -10,23 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var Logo: UIImageView!
-    @IBOutlet weak var howmanyTaps: UITextField!
-    @IBOutlet weak var PlayBtn: UIButton!
+    @IBOutlet weak var logoImg: UIImageView!
+    @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var howManyTapsTxt: UITextField!
     
+        
+    @IBOutlet weak var tapsLbl: UILabel!
     @IBOutlet weak var TapsBtn: UIButton!
-    @IBOutlet weak var TapsLbl: UILabel!
     
-    @IBAction func onPlayBtnPressed(sender: UIButton!) {
+    
+    @IBAction func onBtnPressed(sender: UIButton!) {
         
-        Logo.hidden = true
-        howmanyTaps.hidden = true
-        PlayBtn.hidden = true
         
+        logoImg.hidden = true
+        playBtn.hidden = true
+        howManyTapsTxt.hidden = true
+        
+        tapsLbl.hidden = false
         TapsBtn.hidden = false
-        TapsLbl.hidden = false
-    
-        
     }
-}
+        }
+
 
